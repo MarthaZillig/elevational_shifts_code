@@ -16,7 +16,7 @@ library(boot)
 
 #data for Brewer's Sparrow in the central Great Basin sites:
 
-data <- readRDS("brsp_model_data.RDS")
+data_brsp <- readRDS("brsp_model_data.RDS")
 brsp_matrix <- readRDS("brsp_matrix.RDS")
 ```
 
@@ -27,9 +27,9 @@ n_obs <- 37 #number of unique observers
 
 a.vec <- rep(1,n_obs)
 
-C <- bhgr_matrix
+C <- brsp_matrix
 
-data <- list(C = C, M =nrow(C), J = ncol(C), n_point = n_point, n_canyon = n_canyon, point = bhgr$point, canyon = bhgr$canyon, year = year, elev = elev, interact = interact, spring_ppt = spring_ppt, spring_temp = spring_temp, winter_ppt = winter_ppt, max_ndvi = max_ndvi, time = time, yday = yday, obs_num=obs_num, n_obs=n_obs, a.vec = a.vec)
+data <- data_brsp
 
 Zst <- apply(C, 1, max, na.rm =TRUE)
 
