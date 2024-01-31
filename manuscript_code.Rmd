@@ -16,8 +16,8 @@ library(boot)
 
 #data for Brewer's Sparrow in the western Great Basin sites:
 
-data_brsp <- readRDS("brsp_model_data.RDS")
-brsp_matrix <- readRDS("brsp_matrix.RDS")
+data_brsp <- readRDS("brsp_data.RDS")
+brsp_matrix <- readRDS("brsp_matrix_model.RDS")
 ```
 
 Parameterization for JAGS model 
