@@ -14,7 +14,7 @@ library(abind)
 library(jagsUI)
 library(boot)
 
-#data for Brewer's Sparrow in the central Great Basin sites:
+#data for Brewer's Sparrow in the western Great Basin sites:
 
 data_brsp <- readRDS("brsp_model_data.RDS")
 brsp_matrix <- readRDS("brsp_matrix.RDS")
@@ -23,7 +23,7 @@ brsp_matrix <- readRDS("brsp_matrix.RDS")
 Parameterization for JAGS model 
 
 ```{r}
-n_obs <- 37 #number of unique observers 
+n_obs <- 8 #number of unique observers 
 
 a.vec <- rep(1,n_obs)
 
